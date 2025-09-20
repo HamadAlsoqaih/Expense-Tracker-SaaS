@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New User</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Expense Tracker</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Plan Details</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="add-user.html" class="active">Add User</a></li>
+        <li><a href="add-plan.html">Add Plan</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="form-container">
+    <h1>Add New User</h1>
+    <p>Create a new user account with the required information</p>
+
+    <form class="form-card">
+      <fieldset>
+        <legend>User Information</legend>
+        <p>Please fill in all the required fields to create a new user account</p>
+
+        <!-- Full Name -->
+        <label for="fullName">Full Name *</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+        <!-- Email -->
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <!-- Password -->
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password" placeholder="Create a secure password"
+               minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}" required>
+        <small>Password must be at least 8 characters with uppercase, lowercase, and number</small>
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Create User</button>
+        <button type="reset" class="btn-secondary">Reset Form</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
 
