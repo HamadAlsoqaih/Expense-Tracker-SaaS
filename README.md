@@ -1,110 +1,40 @@
+💸 Expense Tracker SaaS (Front-End)
 
+Responsive front-end prototype for a SaaS Expense Tracker built with HTML5, CSS3, JS.
 
-Expense Tracker SaaS (Front-End)
+| Path                     | Description                                |
+| ------------------------ | ------------------------------------------ |
+| `index.html`             | Home – overview, features, pricing         |
+| `plan-details.html`      | Plan information                           |
+| `feedback.html`          | Contact/feedback form                      |
+| `profile.html`           | User dashboard – search + table + add exp. |
+| `add-user.html`          | Add new user form (HTML5 validation)       |
+| `add-plan.html`          | Add new plan form (HTML5 validation)       |
+| `assets/css/style.css`   | Global styles (nav, layout, colors)        |
+| `assets/css/profile.css` | Dashboard/table styles                     |
+| `assets/js/data.js`      | Dummy expense data                         |
+| `assets/js/app.js`       | Profile logic (search, table, add expense) |
 
-A simple responsive front-end prototype for a SaaS Expense Tracker application.
-Built with HTML5, CSS3, and JavaScript — no backend required.
 
 🚀 Features
 
-Reusable Navigation: Same navigation bar across all pages, with active link highlighting.
+🔗 Reusable navigation on all pages
 
-Home Page (index.html):
+📊 Profile dashboard with search + responsive table
 
-Product overview.
+📝 Forms: Add User, Add Plan, Add Expense, Feedback
 
-Features section.
+🎨 CSS: variables, Flexbox, Grid, media queries
 
-Pricing section.
-
-Plan Details (plan-details.html):
-
-Detailed information about available plans.
-
-Feedback Page (feedback.html):
-
-Contact form with Name, Email, Subject, and Message.
-
-Profile Page (profile.html):
-
-Simulated logged-in user dashboard.
-
-Search form to filter dummy expense data (assets/js/data.js).
-
-Responsive results table styled with Flex/Grid.
-
-Add Expense form (with HTML5 validation).
-
-Add User (add-user.html):
-
-Form with multiple input types (text, email, password, date, select, checkbox).
-
-Demonstrates HTML5 validation.
-
-Add Plan (add-plan.html):
-
-Form with inputs (text, number, select, textarea, checkbox).
-
-Demonstrates HTML5 validation.
+📱 Responsive on mobile, tablet, desktop
 
 
-🛠️ Technologies Used
 
-HTML5: Semantic structure (header, main, section, footer, table).
+# 1. Clone the repository
+git clone https://github.com/yourusername/expense-tracker-saas.git
+cd expense-tracker-saas
 
-CSS3:
-
-Variables for colors and font sizes.
-
-Flexbox for 1D layouts (nav, stats row).
-
-CSS Grid for 2D layouts (pricing cards, responsive table).
-
-Media queries for responsiveness.
-
-JavaScript:
-
-Dummy data stored in data.js.
-
-Search/filtering with live update.
-
-DOM manipulation for tables and forms.
-
-HTML5 form validation.
-
-📖 Pages & Forms
-
-Navigation: Present on every page, consistent styling.
-
-Forms:
-
-Add User (add-user.html) → text, email, password, date, select, checkbox.
-
-Add Plan (add-plan.html) → text, number, select, textarea, checkbox.
-
-Contact (feedback.html) → text, email, text, textarea.
-
-Add Expense (profile.html) → date, text, number.
-
-Validation: All forms use required, min, max, pattern, etc.
-
-📱 Responsiveness
-
-Works on mobile, tablet, desktop.
-
-Navigation collapses into vertical stack on small screens.
-
-Tables reflow into mobile-friendly grid rows.
-
-Pricing/features use CSS Grid for flexible columns
-
-
-📌 Future Improvements
-
-Add real backend integration (Node/Express + database).
-
-User authentication.
-
-Persistent storage (localStorage or APIs).
-
-Better accessibility (ARIA labels, keyboard nav).
+# 2. Open in your browser
+open index.html        # macOS
+xdg-open index.html    # Linux
+start index.html       # Windows
