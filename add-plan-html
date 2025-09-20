@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Plan</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Expense Tracker</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="plans.html">Plan Details</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="add-user.html">Add User</a></li>
+        <li><a href="add-plan.html" class="active">Add Plan</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="form-container">
+    <h1>Add New Plan</h1>
+    <p>Create a new subscription plan with pricing and billing information</p>
+
+    <form class="form-card">
+      <fieldset>
+        <legend>Plan Details</legend>
+        <p>Please fill in all the required fields to create a new subscription plan</p>
+
+        <!-- Plan Name -->
+        <label for="planName">Plan Name *</label>
+        <input type="text" id="planName" name="planName" placeholder="e.g., Premium Plan" required>
+
+        <!-- Price -->
+        <label for="price">Price (USD) *</label>
+        <input type="number" id="price" name="price" placeholder="e.g., 19.99" min="0" step="0.01" required>
+
+        <!-- Description -->
+        <label for="description">Description *</label>
+        <textarea id="description" name="description" placeholder="Describe the features and benefits of this plan..." required></textarea>
+        <small>Provide a detailed description of what this plan includes</small>
+
+        <!-- Billing Cycle -->
+        <label for="billingCycle">Billing Cycle *</label>
+        <select id="billingCycle" name="billingCycle" required>
+          <option value="">Select billing frequency</option>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="form-actions">
+        <button type="submit" class="btn-primary">Create Plan</button>
+        <button type="reset" class="btn-secondary">Reset Form</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
 
