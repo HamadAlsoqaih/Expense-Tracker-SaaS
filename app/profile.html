@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/assets/css/profile.css" />
+    <title>Expense Tracker - Profile</title>
+  </head>
+  <body>
+    <header class="top">
+      <div class="container">
+        <div class="header-container">
+          <h1 class="logo">Expense Tracker</h1>
+          <nav class="menu">
+            <a href="/app/index.html">Home</a>
+            <a href="/app/plan-details.html">Plan Details</a>
+            <a href="/app/profile.html" aria-current="page" class="active">Profile</a>
+            <a href="/app/add-user.html">Add User</a>
+            <a href="/app/add-plan.html">Add Plan</a>
+            <a href="/app/feedback.html">Feedback</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section>
+        <h2>Profile Dashboard</h2>
+        <p class="muted">View and manage your expense summary</p>
+      </section>
+
+      <section class="card">
+        <h3>Expense Summary</h3>
+        <p class="muted small">Overview of your recent expenses</p>
+
+        <div class="stats">
+          <div class="stat-box">
+            <div id="sumTotal" class="stat-value">$0.00</div>
+            <div class="stat-label">Total Expenses</div>
+          </div>
+          <div class="stat-box">
+            <div id="sumCount" class="stat-value">0</div>
+            <div class="stat-label">Transactions</div>
+          </div>
+          <div class="stat-box">
+            <div id="sumAvg" class="stat-value">$0.00</div>
+            <div class="stat-label">Average</div>
+          </div>
+          <div class="stat-box">
+            <div id="sumCats" class="stat-value">0</div>
+            <div class="stat-label">Categories</div>
+          </div>
+        </div>
+      </section>
+      <section class="card">
+        <h3>Add Expense</h3>
+        <p class="muted small">Add a new expense</p>
+
+        <form id="addForm" class="add-form">
+          <label>
+            Date:
+            <input type="date" id="dateInput" required />
+          </label>
+          <label>
+            Category:
+            <input
+              type="text"
+              id="catInput"
+              placeholder="e.g. Grocery"
+              required
+            />
+          </label>
+          <label>
+            Description:
+            <input
+              type="text"
+              id="descInput"
+              placeholder="What is it for?"
+              required
+            />
+          </label>
+          <label>
+            Amount:
+            <input type="number" id="amtInput" step="0.01" min="0" required />
+          </label>
+          <button type="submit">Add</button>
+        </form>
+      </section>
+
+      
+      <script src="assets/js/data.js"></script>
+
+      <section class="card">
+        <h3>Search Expenses</h3>
+        <p class="muted small">Search through your expense history</p>
+
+        <form class="search" role="search" onsubmit="return false">
+          <label for="searchInput" class="sr-only">Search</label>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search by description or category..."
+          />
+          <button id="clearBtn" type="button">Clear</button>
+        </form>
+      </section>
+
+      <section>
+        <div class="table-head">
+          <h3>Expense History</h3>
+          <p class="muted small">
+            <span id="shown">0</span> of <span id="totalRows">0</span> expenses
+            shown
+          </p>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Date</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+
+                <th scope="col" class="right">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="rows"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container footer-note">
+      <p class="muted small">
+        Expense Tracker &copy; 2025. 
+      </p>
+    </footer>
+
+    <script src="/assets/js/data.js"></script>
+  </body>
+</html>
