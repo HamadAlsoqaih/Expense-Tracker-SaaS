@@ -1,0 +1,246 @@
+/* simple, readable CSS (external file as recommended) */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #111;
+}
+
+/* layout containers */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* header / nav */
+.top {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+.logo {
+  margin: 0;
+  font-size: 20px;
+  padding: 12px 0;
+}
+.menu {
+  display: inline-block;
+  float: right;
+  padding: 12px 0;
+}
+.menu a {
+  text-decoration: none;
+  color: #111;
+  margin: 0 6px;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+.menu a.active {
+  background: #111;
+  color: #ffffff;
+}
+.menu a:hover {
+  background: #ada9a9;
+}
+
+
+h2 {
+  margin: 20px 0 6px;
+}
+h3 {
+  margin: 0 0 8px;
+}
+.muted {
+  color: #6b7280;
+}
+.small {
+  font-size: 13px;
+}
+.right {
+  text-align: right;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 14px 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+
+.stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.stat-box {
+  flex: 1 1 200px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-align: center;
+  padding: 16px;
+  background: #fff;
+}
+.stat-value {
+  font-size: 22px;
+  font-weight: bold;
+}
+.stat-label {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+}
+.search input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.search button {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.search button:hover {
+  background: #f1f1f1;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+.table-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+.table-wrap {
+  overflow: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+thead th {
+  text-align: left;
+  font-size: 12px;
+  color: #6b7280;
+  padding: 12px;
+  background: #fafafa;
+  border-bottom: 1px solid #e5e7eb;
+}
+tbody td {
+  padding: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+tbody tr:hover td {
+  background: #fafafa;
+}
+
+
+.pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 12px;
+}
+.pill.gas {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.pill.grocery {
+  background: #dcfce7;
+  color: #15803d;
+}
+.pill.bills {
+  background: #fde2f3;
+  color: #be185d;
+}
+.pill.investment {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+.pill.dining {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.pill.travel {
+  background: #cffafe;
+  color: #0e7490;
+}
+.pill.entertainment {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.footer-note {
+  padding: 20px 16px 40px;
+}
+
+
+@media (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+  .stats {
+    flex-direction: column;
+  }
+}
+
+.add-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+.add-form label {
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.add-form input,
+.add-form select {
+  margin-top: 4px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.add-form button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: #111;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.add-form button:hover {
+  background: #333;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
