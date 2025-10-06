@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add New Plan - Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/assets/css/profile.css">
     <title>Add Plan - Expense Tracker SaaS</title>
@@ -22,6 +25,45 @@
         </div> 
       </div>
     </header>
+ <div class="container">
+    <h1>Add New Plan</h1>
+    <p class="subtitle">Create a new subscription plan with pricing and billing information</p>
 
+    <h3>Plan Details</h3>
+    <p class="note">Please fill in all the required fields to create a new subscription plan</p>
+
+    <form>
+      <div class="form-group">
+        <label for="plan-name">Plan Name *</label>
+        <input type="text" id="plan-name" placeholder="e.g., Premium Plan" required />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price (USD) *</label>
+        <input type="number" step="0.01" id="price" placeholder="e.g., 19.99" required />
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description *</label>
+        <textarea id="description" rows="4" placeholder="Describe the features and benefits of this plan..." required></textarea>
+        <p class="note">Provide a detailed description of what this plan includes</p>
+      </div>
+
+      <div class="form-group">
+        <label for="billing-cycle">Billing Cycle *</label>
+        <select id="billing-cycle" required>
+          <option value="" disabled selected>Select billing frequency</option>
+          <option value="monthly">Monthly</option>
+          <option value="quarterly">Quarterly</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button type="submit" class="create-btn">Create Plan</button>
+        <button type="reset" class="reset-btn">Reset Form</button>
+      </div>
+    </form>
+  </div>
 </body>
 </html>
