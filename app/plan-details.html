@@ -1,27 +1,225 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/profile.css">
-    <title>Add Plan - Expense Tracker SaaS</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Details - Expense Tracker SaaS</title>
+    <meta name="description" content="Detailed comparison of our expense tracking plans. Choose the perfect plan for your financial management needs.">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header class="top">
-      <div class="container">
-       <div class="header-container"><h1 class="logo">Expense Tracker</h1>
-        <nav class="menu">
-            <a href="/app/index.html">Home</a>
-            <a href="/app/plan-details.html" aria-current="page" class="active">Plan Details</a>
-            <a href="/app/profile.html">Profile</a>
-            <a href="/app/add-user.html">Add User</a>
-            <a href="/app/add-plan.html">Add Plan</a>
-            <a href="feedback.html">Feedback</a>
-        </nav>
-        </div> 
-      </div>
+        <div class="container">
+            <div class="header-container">
+                <h1 class="logo">Expense Tracker</h1>
+                <nav class="menu" role="navigation" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="plan-details.html" aria-current="page" class="active">Plan Details</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="add-user.html">Add User</a>
+                    <a href="add-plan.html">Add Plan</a>
+                    <a href="feedback.html">Feedback</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Detailed Plan Comparison</h1>
+                <p class="page-subtitle">Compare all features across our three plans and choose the one that best fits your needs.</p>
+            </div>
+        </section>
+
+        <!-- Pricing Cards Section -->
+        <section class="pricing-cards" aria-labelledby="pricing-title">
+            <div class="container">
+                <div class="pricing-grid">
+                    <article class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Free</h3>
+                            <div class="price">
+                                <span class="amount">$0</span>
+                                <span class="period">Forever</span>
+                            </div>
+                            <p class="plan-description">Perfect for personal use and getting started with expense tracking.</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Basic expense tracking</li>
+                            <li>✓ Up to 50 transactions per month</li>
+                            <li>✓ Email support</li>
+                            <li>✓ Mobile app access</li>
+                            <li>✓ Basic categories</li>
+                            <li>✗ Advanced categories</li>
+                            <li>✗ Data export</li>
+                            <li>✗ Priority support</li>
+                            <li>✗ Custom reports</li>
+                            <li>✗ API access</li>
+                        </ul>
+                        <a href="profile.html" class="btn btn-outline">Choose Free</a>
+                    </article>
+                    <article class="pricing-card featured">
+                        <div class="pricing-badge">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3>Plus</h3>
+                            <div class="price">
+                                <span class="amount">$9.99</span>
+                                <span class="period">per month</span>
+                            </div>
+                            <p class="plan-description">Great for individuals who need more tracking capabilities and better support.</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Basic expense tracking</li>
+                            <li>✓ Unlimited transactions</li>
+                            <li>✓ Email support</li>
+                            <li>✓ Mobile app access</li>
+                            <li>✓ Basic categories</li>
+                            <li>✓ Advanced categories</li>
+                            <li>✓ Data export (CSV, PDF)</li>
+                            <li>✓ Priority support</li>
+                            <li>✗ Custom reports</li>
+                            <li>✗ API access</li>
+                        </ul>
+                        <a href="profile.html" class="btn btn-primary">Choose Plus</a>
+                    </article>
+                    <article class="pricing-card">
+                        <div class="pricing-header">
+                            <h3>Pro</h3>
+                            <div class="price">
+                                <span class="amount">$19.99</span>
+                                <span class="period">per month</span>
+                            </div>
+                            <p class="plan-description">Ideal for professionals and businesses that need advanced analytics and integrations.</p>
+                        </div>
+                        <ul class="pricing-features">
+                            <li>✓ Basic expense tracking</li>
+                            <li>✓ Unlimited transactions</li>
+                            <li>✓ Email support</li>
+                            <li>✓ Mobile app access</li>
+                            <li>✓ Basic categories</li>
+                            <li>✓ Advanced categories</li>
+                            <li>✓ Data export (CSV, PDF)</li>
+                            <li>✓ Priority support</li>
+                            <li>✓ Custom reports & analytics</li>
+                            <li>✓ API access</li>
+                        </ul>
+                        <a href="profile.html" class="btn btn-outline">Choose Pro</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Comparison Table -->
+        <section class="feature-comparison" aria-labelledby="comparison-title">
+            <div class="container">
+                <h2 id="comparison-title">Feature Comparison Table</h2>
+                <p class="comparison-subtitle">See all features side by side to make the best choice</p>
+                
+                <div class="table-wrap">
+                    <table role="table" aria-label="Feature comparison table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Features</th>
+                                <th scope="col">Free</th>
+                                <th scope="col">Plus</th>
+                                <th scope="col">Pro</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Basic expense tracking</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Up to 50 transactions per month</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Email support</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile app access</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Basic categories</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Advanced categories</td>
+                                <td>✗</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Data export</td>
+                                <td>✗</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Priority support</td>
+                                <td>✗</td>
+                                <td>✓</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>Custom reports</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✓</td>
+                            </tr>
+                            <tr>
+                                <td>API access</td>
+                                <td>✗</td>
+                                <td>✗</td>
+                                <td>✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Expense Tracker</h4>
+                    <p>Smart financial management for the modern world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="plan-details.html">Plans</a>
+                        <a href="feedback.html">Support</a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>support@expensetracker.com</p>
+                    <p>1-800-EXPENSE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Expense Tracker SaaS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
