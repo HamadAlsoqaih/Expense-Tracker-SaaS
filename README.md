@@ -13,8 +13,6 @@ Responsive front-end prototype for a SaaS Expense Tracker built with HTML5, CSS3
 | `assets/css/style.css`   | Global styles (nav, layout, colors)        |
 | `assets/css/profile.css` | Dashboard/table styles                     |
 | `assets/js/data.js`      | Dummy expense data                         |
-| `assets/js/app.js`       | Profile logic (search, table, add expense) |
-
 
 🚀 Features
 
