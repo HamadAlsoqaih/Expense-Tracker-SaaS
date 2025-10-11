@@ -1,142 +1,276 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/assets/css/profile.css" />
-    <title>Expense Tracker - Profile</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard - Expense Tracker SaaS</title>
+    <meta name="description" content="View and manage your expense tracking dashboard with comprehensive analytics and expense management tools.">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
     <header class="top">
-      <div class="container">
-        <div class="header-container">
-          <h1 class="logo">Expense Tracker</h1>
-          <nav class="menu">
-            <a href="/app/index.html">Home</a>
-            <a href="/app/plan-details.html">Plan Details</a>
-            <a href="/app/profile.html" aria-current="page" class="active">Profile</a>
-            <a href="/app/add-user.html">Add User</a>
-            <a href="/app/add-plan.html">Add Plan</a>
-            <a href="/app/feedback.html">Feedback</a>
-          </nav>
+        <div class="container">
+            <div class="header-container">
+                <h1 class="logo">Expense Tracker</h1>
+                <nav class="menu" role="navigation" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="plan-details.html">Plan Details</a>
+                    <a href="profile.html" aria-current="page" class="active">Profile</a>
+                    <a href="add-user.html">Add User</a>
+                    <a href="add-plan.html">Add Plan</a>
+                    <a href="feedback.html">Feedback</a>
+                </nav>
+            </div>
         </div>
-      </div>
     </header>
 
-    <main class="container">
-      <section>
-        <h2>Profile Dashboard</h2>
-        <p class="muted">View and manage your expense summary</p>
-      </section>
+    <main>
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Profile Dashboard</h1>
+                <p class="page-subtitle">View and manage your expense summary and analytics</p>
+            </div>
+        </section>
 
-      <section class="card">
-        <h3>Expense Summary</h3>
-        <p class="muted small">Overview of your recent expenses</p>
+        <section class="dashboard-section" aria-labelledby="summary-title">
+            <div class="container">
+                <div class="card">
+                    <h2 id="summary-title">Expense Summary</h2>
+                    <p class="muted small">Overview of your recent expenses</p>
 
-        <div class="stats">
-          <div class="stat-box">
-            <div id="sumTotal" class="stat-value">$0.00</div>
-            <div class="stat-label">Total Expenses</div>
-          </div>
-          <div class="stat-box">
-            <div id="sumCount" class="stat-value">0</div>
-            <div class="stat-label">Transactions</div>
-          </div>
-          <div class="stat-box">
-            <div id="sumAvg" class="stat-value">$0.00</div>
-            <div class="stat-label">Average</div>
-          </div>
-          <div class="stat-box">
-            <div id="sumCats" class="stat-value">0</div>
-            <div class="stat-label">Categories</div>
-          </div>
-        </div>
-      </section>
-      <section class="card">
-        <h3>Add Expense</h3>
-        <p class="muted small">Add a new expense</p>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <div id="sumTotal" class="stat-value">$0.00</div>
+                            <div class="stat-label">Total Expenses</div>
+                        </div>
+                        <div class="stat-box">
+                            <div id="sumCount" class="stat-value">0</div>
+                            <div class="stat-label">Transactions</div>
+                        </div>
+                        <div class="stat-box">
+                            <div id="sumAvg" class="stat-value">$0.00</div>
+                            <div class="stat-label">Average</div>
+                        </div>
+                        <div class="stat-box">
+                            <div id="sumCats" class="stat-value">0</div>
+                            <div class="stat-label">Categories</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <form id="addForm" class="add-form">
-          <label>
-            Date:
-            <input type="date" id="dateInput" required />
-          </label>
-          <label>
-            Category:
-            <input
-              type="text"
-              id="catInput"
-              placeholder="e.g. Grocery"
-              required
-            />
-          </label>
-          <label>
-            Description:
-            <input
-              type="text"
-              id="descInput"
-              placeholder="What is it for?"
-              required
-            />
-          </label>
-          <label>
-            Amount:
-            <input type="number" id="amtInput" step="0.01" min="0" required />
-          </label>
-          <button type="submit">Add</button>
-        </form>
-      </section>
+        <section class="add-expense-section" aria-labelledby="add-title">
+            <div class="container">
+                <div class="card">
+                    <h2 id="add-title">Add Expense</h2>
+                    <p class="muted small">Add a new expense to your tracking system</p>
 
-      
-      <script src="assets/js/data.js"></script>
+                    <form id="addForm" class="add-form" novalidate>
+                        <label for="dateInput">
+                            Date
+                            <input type="date" id="dateInput" required aria-describedby="date-error">
+                            <div id="date-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </label>
+                        
+                        <label for="catInput">
+                            Category
+                            <select id="catInput" required aria-describedby="category-error">
+                                <option value="">Select category</option>
+                                <option value="Grocery">Grocery</option>
+                                <option value="Gas">Gas</option>
+                                <option value="Bills">Bills</option>
+                                <option value="Investment">Investment</option>
+                                <option value="Dining">Dining</option>
+                                <option value="Travel">Travel</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <div id="category-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </label>
+                        
+                        <label for="descInput">
+                            Description
+                            <input type="text" id="descInput" placeholder="What is it for?" required aria-describedby="desc-error">
+                            <div id="desc-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </label>
+                        
+                        <label for="amtInput">
+                            Amount
+                            <input type="number" id="amtInput" step="0.01" min="0" required placeholder="0.00" aria-describedby="amount-error">
+                            <div id="amount-error" class="error-message" role="alert" aria-live="polite"></div>
+                        </label>
+                        
+                        <button type="submit" class="btn btn-primary">Add Expense</button>
+                        <button type="reset" class="btn btn-secondary">Clear Form</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-      <section class="card">
-        <h3>Search Expenses</h3>
-        <p class="muted small">Search through your expense history</p>
+        <section class="search-section" aria-labelledby="search-title">
+            <div class="container">
+                <div class="card">
+                    <h2 id="search-title">Search Expenses</h2>
+                    <p class="muted small">Search through your expense history</p>
 
-        <form class="search" role="search" onsubmit="return false">
-          <label for="searchInput" class="sr-only">Search</label>
-          <input
-            id="searchInput"
-            type="search"
-            placeholder="Search by description or category..."
-          />
-          <button id="clearBtn" type="button">Clear</button>
-        </form>
-      </section>
+                    <form class="search" role="search" onsubmit="return false">
+                        <label for="searchInput" class="sr-only">Search expenses</label>
+                        <input
+                            id="searchInput"
+                            type="search"
+                            placeholder="Search by description or category..."
+                            aria-describedby="search-help"
+                        />
+                        <button id="clearBtn" type="button" class="btn btn-outline">Clear</button>
+                    </form>
+                    <p id="search-help" class="muted small">Search by description or category to filter your expenses</p>
+                </div>
+            </div>
+        </section>
 
-      <section>
-        <div class="table-head">
-          <h3>Expense History</h3>
-          <p class="muted small">
-            <span id="shown">0</span> of <span id="totalRows">0</span> expenses
-            shown
-          </p>
-        </div>
+        <section class="expense-history" aria-labelledby="history-title">
+            <div class="container">
+                <div class="table-head">
+                    <h2 id="history-title">Expense History</h2>
+                    <p class="muted small">
+                        <span id="shown">0</span> of <span id="totalRows">0</span> expenses shown
+                    </p>
+                </div>
 
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Category</th>
-                <th scope="col">Description</th>
-
-                <th scope="col" class="right">Amount</th>
-              </tr>
-            </thead>
-            <tbody id="rows"></tbody>
-          </table>
-        </div>
-      </section>
+                <div class="table-wrap">
+                    <table role="table" aria-label="Expense history table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Description</th>
+                                <th scope="col" class="right">Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rows">
+                            <!-- Dynamic content will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <footer class="container footer-note">
-      <p class="muted small">
-        Expense Tracker &copy; 2025. 
-      </p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Expense Tracker</h4>
+                    <p>Smart financial management for the modern world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="plan-details.html">Plans</a>
+                        <a href="feedback.html">Support</a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>support@expensetracker.com</p>
+                    <p>1-800-EXPENSE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Expense Tracker SaaS. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="/assets/js/data.js"></script>
-  </body>
+    <script src="../assets/js/data.js"></script>
+    <script>
+        // Enhanced form validation for the profile page
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('addForm');
+            const inputs = form.querySelectorAll('input[required], select[required]');
+            
+            // Real-time validation
+            inputs.forEach(input => {
+                input.addEventListener('blur', validateField);
+                input.addEventListener('input', clearError);
+            });
+            
+            // Form submission
+            form.addEventListener('submit', handleSubmit);
+            
+            function validateField(e) {
+                const field = e.target;
+                const errorElement = document.getElementById(field.id + '-error');
+                
+                if (!field.value.trim()) {
+                    showError(field, errorElement, 'This field is required');
+                    return false;
+                }
+                
+                if (field.type === 'number' && field.value < 0) {
+                    showError(field, errorElement, 'Amount must be positive');
+                    return false;
+                }
+                
+                clearError(field, errorElement);
+                return true;
+            }
+            
+            function clearError(field, errorElement) {
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    errorElement.style.display = 'none';
+                }
+                field.classList.remove('error');
+            }
+            
+            function showError(field, errorElement, message) {
+                if (errorElement) {
+                    errorElement.textContent = message;
+                    errorElement.style.display = 'block';
+                }
+                field.classList.add('error');
+            }
+            
+            function handleSubmit(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                inputs.forEach(input => {
+                    if (!validateField({ target: input })) {
+                        isValid = false;
+                    }
+                });
+                
+                if (isValid) {
+                    // Add the expense to the data array
+                    const newExpense = {
+                        date: document.getElementById('dateInput').value,
+                        category: document.getElementById('catInput').value,
+                        description: document.getElementById('descInput').value,
+                        amount: parseFloat(document.getElementById('amtInput').value)
+                    };
+                    
+                    // Add to expenses array (this would normally be sent to server)
+                    expenses.push(newExpense);
+                    
+                    // Refresh the display
+                    fillSummary(expenses);
+                    fillTable(expenses);
+                    
+                    // Clear the form
+                    form.reset();
+                    
+                    // Show success message
+                    alert('Expense added successfully!');
+                } else {
+                    alert('Please fix the errors in the form before submitting.');
+                }
+            }
+        });
+    </script>
+</body>
 </html>
