@@ -1,27 +1,313 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/assets/css/profile.css">
-    <title>Add Plan - Expense Tracker SaaS</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Support - Expense Tracker SaaS</title>
+    <meta name="description" content="Get help and support for your expense tracking needs. Contact our team or submit feedback about our platform.">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
     <header class="top">
-      <div class="container">
-       <div class="header-container"><h1 class="logo">Expense Tracker</h1>
-        <nav class="menu">
-        <a href="/app/index.html">Home</a>
-        <a href="/app/plan-details.html">Plan Details</a>
-        <a href="/app/profile.html">Profile</a>
-        <a href="/app/add-user.html">Add User</a>
-        <a href="/app/add-plan.html">Add Plan</a>
-        <a href="feedback.html" aria-current="page" class="active">Feedback</a>
-        </nav>
-        </div> 
-      </div>
+        <div class="container">
+            <div class="header-container">
+                <h1 class="logo">Expense Tracker</h1>
+                <nav class="menu" role="navigation" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="plan-details.html">Plan Details</a>
+                    <a href="profile.html">Profile</a>
+                    <a href="add-user.html">Add User</a>
+                    <a href="add-plan.html">Add Plan</a>
+                    <a href="feedback.html" aria-current="page" class="active">Feedback</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" aria-labelledby="page-title">
+            <div class="container">
+                <h1 id="page-title">Feedback & Support</h1>
+                <p class="page-subtitle">We're here to help! Get support or share your feedback with our team.</p>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="support-layout">
+                <!-- Contact Form Section -->
+                <section class="contact-form-section" aria-labelledby="form-title">
+                    <div class="card">
+                        <h2 id="form-title">Send us a Message</h2>
+                        <p class="muted">Fill out the form below and we'll get back to you within 24 hours.</p>
+                        
+                        <form class="contact-form" action="#" method="POST" novalidate>
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    aria-describedby="name-error"
+                                    placeholder="Enter your full name"
+                                >
+                                <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="required">*</span></label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    required 
+                                    aria-describedby="email-error"
+                                    placeholder="Enter your email address"
+                                >
+                                <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="required">*</span></label>
+                                <select id="subject" name="subject" required aria-describedby="subject-error">
+                                    <option value="">Select a subject</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div id="subject-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    rows="6" 
+                                    required 
+                                    aria-describedby="message-error"
+                                    placeholder="Please describe your inquiry or feedback in detail..."
+                                ></textarea>
+                                <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Subscribe to our newsletter for updates and tips
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                                <button type="reset" class="btn btn-secondary">Clear Form</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Support Information Section -->
+                <aside class="support-info" aria-labelledby="support-title">
+                    <div class="card">
+                        <h2 id="support-title">Other Ways to Get Help</h2>
+                        
+                        <div class="support-methods">
+                            <article class="support-method">
+                                <h3>📧 Email Support</h3>
+                                <p>For general inquiries and support</p>
+                                <a href="mailto:support@expensetracker.com" class="support-link">
+                                    support@expensetracker.com
+                                </a>
+                                <p class="response-time">Response time: 24 hours</p>
+                            </article>
+
+                            <article class="support-method">
+                                <h3>📞 Phone Support</h3>
+                                <p>For urgent issues and business inquiries</p>
+                                <a href="tel:1-800-EXPENSE" class="support-link">
+                                    1-800-EXPENSE
+                                </a>
+                                <p class="response-time">Available: Mon-Fri 9AM-6PM EST</p>
+                            </article>
+
+                            <article class="support-method">
+                                <h3>💬 Live Chat</h3>
+                                <p>Get instant help from our support team</p>
+                                <button class="btn btn-outline" onclick="openLiveChat()">
+                                    Start Live Chat
+                                </button>
+                                <p class="response-time">Available: Mon-Fri 9AM-6PM EST</p>
+                            </article>
+
+                            <article class="support-method">
+                                <h3>📚 Help Center</h3>
+                                <p>Browse our knowledge base and FAQs</p>
+                                <a href="#" class="support-link">
+                                    Visit Help Center
+                                </a>
+                                <p class="response-time">24/7 self-service</p>
+                            </article>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="quick-links">
+                            <h3>Quick Links</h3>
+                            <nav aria-label="Quick support links">
+                                <a href="plan-details.html">View Plans</a>
+                                <a href="profile.html">Account Settings</a>
+                                <a href="#faq">Common Questions</a>
+                                <a href="#status">System Status</a>
+                            </nav>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section" id="faq" aria-labelledby="faq-title">
+                <div class="card">
+                    <h2 id="faq-title">Frequently Asked Questions</h2>
+                    <div class="faq-grid">
+                        <article class="faq-item">
+                            <h3>How do I reset my password?</h3>
+                            <p>Click on "Forgot Password" on the login page, enter your email address, and follow the instructions sent to your email.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>Can I export my data?</h3>
+                            <p>Yes, you can export your expense data in CSV, PDF, or Excel formats from the Reports section in your dashboard.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>Is there a mobile app?</h3>
+                            <p>Our platform is fully responsive and works great on mobile browsers. We're also developing native mobile apps.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>How secure is my financial data?</h3>
+                            <p>We use bank-level encryption and are SOC 2 Type II compliant. Your data is never shared with third parties.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>Can I cancel my subscription anytime?</h3>
+                            <p>Yes, you can cancel your subscription at any time from your account settings. No cancellation fees apply.</p>
+                        </article>
+                        <article class="faq-item">
+                            <h3>Do you offer refunds?</h3>
+                            <p>We offer a 30-day money-back guarantee for all new subscriptions. Contact support for refund requests.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Expense Tracker</h4>
+                    <p>Smart financial management for the modern world.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <nav aria-label="Footer navigation">
+                        <a href="index.html">Home</a>
+                        <a href="plan-details.html">Plans</a>
+                        <a href="feedback.html">Support</a>
+                    </nav>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>support@expensetracker.com</p>
+                    <p>1-800-EXPENSE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Expense Tracker SaaS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Form validation and submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            // Real-time validation
+            inputs.forEach(input => {
+                input.addEventListener('blur', validateField);
+                input.addEventListener('input', clearError);
+            });
+            
+            // Form submission
+            form.addEventListener('submit', handleSubmit);
+            
+            function validateField(e) {
+                const field = e.target;
+                const errorElement = document.getElementById(field.name + '-error');
+                
+                if (!field.value.trim()) {
+                    showError(field, errorElement, 'This field is required');
+                    return false;
+                }
+                
+                if (field.type === 'email' && !isValidEmail(field.value)) {
+                    showError(field, errorElement, 'Please enter a valid email address');
+                    return false;
+                }
+                
+                clearError(field, errorElement);
+                return true;
+            }
+            
+            function clearError(field, errorElement) {
+                if (errorElement) {
+                    errorElement.textContent = '';
+                    errorElement.style.display = 'none';
+                }
+                field.classList.remove('error');
+            }
+            
+            function showError(field, errorElement, message) {
+                if (errorElement) {
+                    errorElement.textContent = message;
+                    errorElement.style.display = 'block';
+                }
+                field.classList.add('error');
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            function handleSubmit(e) {
+                e.preventDefault();
+                
+                let isValid = true;
+                inputs.forEach(input => {
+                    if (!validateField({ target: input })) {
+                        isValid = false;
+                    }
+                });
+                
+                if (isValid) {
+                    // Simulate form submission
+                    alert('Thank you for your message! We\'ll get back to you within 24 hours.');
+                    form.reset();
+                } else {
+                    alert('Please fix the errors in the form before submitting.');
+                }
+            }
+        });
+        
+        function openLiveChat() {
+            alert('Live chat feature coming soon! Please use email or phone support for now.');
+        }
+    </script>
 </body>
 </html>
